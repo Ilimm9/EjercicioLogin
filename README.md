@@ -94,7 +94,7 @@ El bucle *ngFor en Angular es una directiva estructural que se utiliza para iter
 
 
 
-            **PREGUNTAS FINALES**
+## PREGUNTAS FINALES
 1. Ventajas de usar servicios en Angular para el consumo de APIs
 El uso de servicios en Angular para consumir APIs permite mantener el código más organizado . Al separar la lógica de las solicitudes HTTP de los componentes, se mejora la mantenibilidad y se facilita la reutilización del código. Los servicios centralizan el manejo de errores, lo que garantiza una gestión coherente de los fallos en las solicitudes.
 
@@ -108,4 +108,4 @@ Servicios de mapas como Google Maps o Mapbox.
 APIs de inteligencia artificial como Google Cloud Vision o OpenAI.
 Servicios de correo electrónico como SendGrid para enviar notificaciones.
 
-**✒️Ilian Morales** - [iliMorales💜](https://github.com/Ilimm9)
+**✒️Ilian Morales** - [iliMorales 💜](https://github.com/Ilimm9)
