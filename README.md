@@ -88,13 +88,13 @@ Esto permite que cuando el componente se inicializa, se carguen los datos de los
 
 - **Crear el Componente de la Tabla de Usuarios**
 ![tabla](src/assets/img/tabla.png)
+
 Pregunta: ¿Para qué sirve el bucle *ngFor en Angular? 
 El bucle *ngFor en Angular es una directiva estructural que se utiliza para iterar sobre una lista (un array u objeto iterable) y renderizar una sección de HTML para cada elemento en la lista. En otras palabras, crea una copia de un bloque HTML para cada item del array o iterable que se pase como parámetro, posteriormente sse sutiye por otros metodos debido a la paginacion agregada al componente.
 
--**Integrar el Componente en la Aplicación**
 
 
-                ---PREGUNTAS FINALES---
+            **PREGUNTAS FINALES**
 1. Ventajas de usar servicios en Angular para el consumo de APIs
 El uso de servicios en Angular para consumir APIs permite mantener el código más organizado . Al separar la lógica de las solicitudes HTTP de los componentes, se mejora la mantenibilidad y se facilita la reutilización del código. Los servicios centralizan el manejo de errores, lo que garantiza una gestión coherente de los fallos en las solicitudes.
 
