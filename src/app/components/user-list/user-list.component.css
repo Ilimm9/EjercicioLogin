@@ -40,7 +40,7 @@
 }
 
 .table th {
-    background-color: #5e0c91;
+    background-color: var(--moradoTablas);
     color: white;
     text-align: center;
     padding: 12px;
@@ -54,7 +54,7 @@
     color: #495057;
 }
 
-/* Efecto hover para filas de la tabla */
+/* hover para filas de tabla */
 .table tr:hover {
     background-color: #e9ecef;
 }

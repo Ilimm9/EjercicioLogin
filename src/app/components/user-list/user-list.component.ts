@@ -1,19 +1,21 @@
-import { AfterViewInit,Component, OnInit,ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy,AfterViewInit,Component, OnInit,ViewChild } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { CommonModule } from '@angular/common';
 import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import { Usuarios } from '../../models/usuarios';
-import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 
 @Component({
   selector: 'app-user-list',
   standalone: true,
-  imports: [CommonModule,MatTableModule, MatPaginatorModule,MatFormFieldModule, MatInputModule],
+  imports: [CommonModule,MatTableModule, MatPaginatorModule,MatFormFieldModule,MatInputModule],
   templateUrl: './user-list.component.html',
-  styleUrl: './user-list.component.css'
+  styleUrl: './user-list.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+
 })
 export class UserListComponent implements OnInit, AfterViewInit {
   displayedColumns: string[] = [ 'id','name', 'email', 'role'];

@@ -1,39 +1,49 @@
 <div class="fondo">
-    <mat-toolbar>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span>My App</span>
-    <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
-    </button>
-    <button mat-icon-button 
-        (click)="Salir()">
+  <mat-sidenav-container fullscreen>
+    <mat-sidenav #sidenav mode="side" [(opened)]="isSidenavOpen">
+      <div class="tituloNav" >
+        <h3>Bienvenidio:
+        @if(usuario){
+          <a >{{usuario.name}}</a>
+        }</h3>
+      </div>
+      <mat-nav-list>
+        <a  mat-list-item (click)="moon()" routerLinkActive="active-link">NASA</a>
+        <a  mat-list-item (click)="user()" routerLinkActive="active-link">USUARIO</a>
+      </mat-nav-list>
+      <div class="sidenav-footer">
+        <p>Diseñó: Ili Morales💜</p>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+
+<!-- barraMenu -->
+      <mat-toolbar>
+        <button mat-icon-button (click)="toggleSidenav()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span>Consumo de API</span>
+        <span class="example-spacer"></span>
+        <button mat-icon-button>
+          <mat-icon>favorite</mat-icon>
+        </button>
+<!-- menuUsuario -->
+          <button mat-icon-button [matMenuTriggerFor]="menu" class="avatar-button">
+            <img
+            alt="avatar"
+            [src]="usuariolocal.getUsuario()?.avatar || 'assets/default-avatar.png'"
+            class="avatar"
+          />
+        </button>
+        <mat-menu #menu="matMenu" >
+          <button mat-menu-item (click)="Salir()">
             <mat-icon>logout</mat-icon>
+            <span>Salir</span>
           </button>
-  </mat-toolbar>
-
-  <router-outlet/>
-
-  <!-- <div class="centrado">
-  
-  <mat-card class="card" appearance="outlined">
-    <mat-card-header>
-      <mat-card-title>Chihuahua</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p>{{longText}}</p>
-    </mat-card-content>
-    <mat-card-footer class="example-card-footer">
-        <button mat-fab extended
-        (click)="Salir()">
-            <mat-icon>home</mat-icon>
-            Salir
-          </button>
-    </mat-card-footer>
-  </mat-card>
-  
-</div> -->
+        </mat-menu>
+      </mat-toolbar>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </div>
- 
+

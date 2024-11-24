@@ -1,0 +1,62 @@
+<h2 class="titulo" mat-dialog-title>{{ data.isViewMode ? data.row.title : 'Editar Información' }}</h2>
+
+<mat-dialog-content class="form">
+  <!-- Vista Detallada -->
+  <ng-container *ngIf="data.isViewMode">
+    <mat-card class="card" appearance="outlined">
+      <mat-card-header>
+          <img mat-card-xl-image [src]="data.row.url" alt="Astronomy Picture of the Day" class="image">
+      </mat-card-header>
+<div class="centrar">
+  <mat-card-title>By: {{ data.row.copyright ? data.row.copyright : 'Anonymous' }}</mat-card-title>
+  <mat-card-subtitle >Date: {{ data.row.date }}</mat-card-subtitle>
+</div>        
+      <mat-card-content class="explanation-text">
+        {{ data.row.explanation }}
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+
+  <!-- Modo Edición -->
+  <ng-container *ngIf="!data.isViewMode">
+        <form class="form">
+
+          <!-- Imagen -->
+          <img mat-card-xl-image [src]="data.row.url" alt="Astronomy Picture of the Day" class="image">
+
+          <!-- Nombre -->
+          <mat-form-field appearance="outline" >
+            <mat-label>Nombre</mat-label>
+            <input matInput [(ngModel)]="data.row.title" name="title" placeholder="Ingrese el nombre" />
+          </mat-form-field>
+
+          <!-- Fecha -->
+          <mat-form-field appearance="outline" >
+            <mat-label>Fecha</mat-label>
+            <input matInput [(ngModel)]="data.row.date" name="date" placeholder="Seleccione una fecha" type="date" />
+          </mat-form-field>
+
+          
+          <!-- Explicación -->
+          <mat-form-field appearance="outline" >
+            <mat-label>Explicación</mat-label>
+            <textarea matInput [(ngModel)]="data.row.explanation" name="explanation" placeholder="Ingrese la explicación"></textarea>
+          </mat-form-field>
+
+          <!-- Autor -->
+          <mat-form-field appearance="outline">
+            <mat-label>Autor</mat-label>
+            <input matInput [(ngModel)]="data.row.copyright" name="copyright" placeholder="Ingrese el autor" />
+          </mat-form-field>
+        </form>
+      <!-- </mat-card-content>
+    </mat-card> -->
+  </ng-container>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <div>
+  <button  mat-raised-button class="boton" (click)="salirModal()">{{!data.isViewMode?"Cancelar":"Salir"}}</button>
+  <button  mat-raised-button class="button" (click)="guardarCambios()" *ngIf="!data.isViewMode">Guardar</button>
+</div>
+</mat-dialog-actions>

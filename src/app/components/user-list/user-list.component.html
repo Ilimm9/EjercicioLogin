@@ -2,7 +2,11 @@
   <h2>User List</h2>
 <mat-form-field>
   <mat-label>Filter</mat-label>
-  <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+  <input matInput 
+  (keyup)="applyFilter($event)" 
+  placeholder="Ex. Nombre"
+  #input
+>
 </mat-form-field>
 <div class="mat-elevation-z8">
     <table class="table table-bordered table-striped"
@@ -37,26 +41,3 @@
     </mat-paginator>
   </div>  
 </div>
-
-
-<!-- <div class="container mt-5">
-    <h2>User List</h2>
-<table class="table table-bordered table-striped">
-<thead>
-<tr>
-<th>ID</th>
-<th>Name</th>
-<th>Email</th>
-<th>Role</th>
-</tr>
-</thead>
-<tbody>
-<tr *ngFor="let user of users">
-<td>{{ user.id }}</td>
-<td>{{ user.name }}</td>
-<td>{{ user.email }}</td>
-<td>{{ user.role }}</td>
-</tr>
-</tbody>
-</table>
-</div> -->
