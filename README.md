@@ -11,7 +11,7 @@ Tras un inicio de sesión correcto, muestra una tabla con los datos de usuarios 
 - 🎨 **Material Design**: La interfaz de usuario está elaborada con componentes de Material Design.
 Después de un login exitoso, se podra visualizar un menú en el cual el usuario podra elegir entre dos opciones: 
 - 📊 **Tabla de Usuarios**: Una tabla con los datos de usuarios obtenidos de la API.
--🌠 **Tabla APOD (Astronomy Picture of the Day)**: Una tabla donde se usa un API de la NASA para mostrar imágenes astronómicas diarias con sus descripciones.
+- 🌠 **Tabla APOD (Astronomy Picture of the Day)**: Una tabla donde se usa un API de la NASA para mostrar imágenes astronómicas diarias con sus descripciones.
 En esta segunda tabla se implementa una columna con acciones; Ver, Editar y Eliminar, las ultimas dos acciones en la tabla están implementadas a nivel de interfaz de usuario. Estas acciones no realizan modificaciones en el servidor, ya que no se envían cambios a la API.  
 - ⚠️ **Manejo de Errores**: Se visualizan mensajes de error si las credenciales son incorrectas o si ocurre algún problema con la API, para ello se hace uso de sweetAlert.
 
