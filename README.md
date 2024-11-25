@@ -62,11 +62,13 @@ Consumo de apiAPOD(Tabla):
 ![Tabla](src/assets/img/APOD.png)
 
 Acciones implementadas en la tabla APOD:
+
 <div style="display: flex; justify-content: space-around;">
-  <img src="src/assets/img/ver.png" style="width: 100px; margin: 0 10px;">
-  <img src="src/assets/img/editar.png" style="width: 100px; margin: 0 10px;">
-  <img src="src/assets/img/eliminar.png" style="width: 100px; margin: 0 10px;">
+  <img src="src/assets/img/ver.png" style="width: 100%; margin: 0 10px;">
+  <img src="src/assets/img/editar.png" style="width: 100%; margin: 0 10px;">
+  <img src="src/assets/img/eliminar.png" style="width: 100%; margin: 0 10px;">
 </div>
+
 
 ## 📚 Lo aprendido
 
