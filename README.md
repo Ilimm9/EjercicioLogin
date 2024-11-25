@@ -65,7 +65,7 @@ Acciones implementadas en la tabla APOD:
 
 <div style="display: flex; justify-content: space-between; width: 100%;">
   <img src="src/assets/img/ver.png" alt="Ver" style="width: 32%; margin: 0 1%;">
-  <img src="src/assets/img/elitar.png" alt="Editar" style="width: 32%; margin: 0 1%;">
+  <img src="src/assets/img/editar.png" alt="Editar" style="width: 32%; margin: 0 1%;">
   <img src="src/assets/img/eliminar.png" alt="Eliminar" style="width: 32%; margin: 0 1%;">
 </div>
 
