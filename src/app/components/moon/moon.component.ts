@@ -83,7 +83,13 @@ export class MoonComponent implements OnInit {
     const dialogRef = this.dialog.open(MoonDialogComponent, {
       width:'800px',
       data: { row, isViewMode: false },
-    });
+    }  
+
+  );
+  dialogRef.afterClosed().subscribe(()=>{
+    this.dataSource._updateChangeSubscription();
+  })
+
   }
   eliminar(id: number): void {
     Swal.fire({
